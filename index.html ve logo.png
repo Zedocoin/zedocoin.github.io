@@ -163,4 +163,64 @@ footer{
 </nav>
 
 <section class="hero">
-<img src="logo.png" alt="ZEDO CO
+<img src="logo.png" alt="ZEDO COINS Logo">
+<h2>Next Generation Digital Asset</h2>
+<p>Launching Soon on Binance Smart Chain</p>
+
+<div class="buttons">
+<button class="btn buy">COMING SOON</button>
+<button class="btn whitepaper">WHITEPAPER</button>
+</div>
+
+<div class="countdown" id="countdown"></div>
+
+</section>
+
+<section class="section">
+<h2>Why ZEDO COINS?</h2>
+<div class="cards">
+<div class="card">
+<h3>⚡ Fast Transactions</h3>
+<p>Ultra fast & low gas fees powered by BSC.</p>
+</div>
+<div class="card">
+<h3>🔒 Secure</h3>
+<p>Built with security and transparency in mind.</p>
+</div>
+<div class="card">
+<h3>🚀 Growth Focused</h3>
+<p>Strong roadmap and expanding community.</p>
+</div>
+</div>
+</section>
+
+<footer>
+© 2026 ZEDO COINS • All Rights Reserved
+</footer>
+
+<script>
+var countDownDate = new Date("March 30, 2026 00:00:00").getTime();
+
+var x = setInterval(function() {
+
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("countdown").innerHTML =
+  "Launch In: " + days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "WE ARE LIVE!";
+  }
+}, 1000);
+</script>
+
+</body>
+</html>
