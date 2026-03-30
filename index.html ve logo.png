@@ -1,57 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZEDO COINS | Official</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Orbitron', sans-serif;
-}
-body{
-    background: radial-gradient(circle at center, #0f1f0f 0%, #000 70%);
-    color:white;
-    text-align:center;
-    overflow-x:hidden;
-}
-/* NAVBAR */
-nav{
-    display:flex;
-    justify-content:space-between;
-    padding:20px 10%;
-    background:rgba(0,0,0,0.6);
-    backdrop-filter:blur(10px);
-}
-nav h1{
-    color:#00ff88;
-    letter-spacing:2px;
-}
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:30px;
-}
-nav ul li{
-    cursor:pointer;
-    transition:0.3s;
-}
-nav ul li:hover{
-    color:#00ff88;
-}
-/* HERO */
-.hero{
-    padding:80px 20px;
-}
-.hero img{
-    width:250px;
-    animation:float 4s ease-in-out infinite;
-    filter:drop-shadow(0 0 25px #00ff88);
-}
-@keyframes float{
-    0%{transform:translateY(0px);}
-    50%{transform:translateY(-20px);}
-    100%{transform:translateY(
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZEDO COIN | Official</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Orbitron', sans-serif;
+        }
+        body {
+            background: radial-gradient(circle at center, #0a150a 0%, #000 80%);
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+        /* NAVBAR */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #00ff8833;
+        }
+        nav h1 {
+            color: #00ff88;
+            letter-spacing: 4px;
+            font-size: 1.5rem;
+            text-shadow: 0 0 10px #00ff88;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        nav ul li {
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+        nav ul li:hover {
+            color: #00ff88;
+            text-shadow: 0 0 5px #00ff88;
+        }
+        /* HERO */
+        .hero {
+            padding: 100px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: #fff;
+            text-shadow: 0 0 20px rgba(255,255,255,0.2);
+        }
+        .hero p {
+            color: #00ff88;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+        .hero-img {
+            width: 250px;
+            margin: 30px 0;
+            animation: float 4s ease-in-out infinite;
+            filter: drop-shadow(0 0 25px #00ff88);
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .btn {
+            padding: 15px 40px;
+            background: transparent;
+            color: #00ff88;
+            border: 2px solid #00ff88;
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 2px;
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn:hover {
+            background: #00ff88;
+            color: #000;
+            box-shadow: 0 0 30px #00ff88;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h1>ZEDO COIN</h1>
+        <ul>
+            <li>Hakkımızda</li>
+            <li>Tokenomics</li>
+            <li>Yol Haritası</li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-img">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="45" stroke="#00ff88" stroke-width="2"/>
+                <path d="M30 70L70 30M30 30L70 70" stroke="#00ff88" stroke-width="5"/>
+            </svg>
+        </div>
+        
+        <h2>THE BOSS IS HERE</h2>
+        <p>Güç ve Teknoloji Bir Arada.</p>
+        
+        <a href="#" class="btn">YAKINDA</a>
+    </div>
+
+</body>
+</html>
