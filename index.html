@@ -3,209 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZEDOCOIN | The Family Office</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <title>ZEDO COIN | Official</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --gold: #d4af37;
-            --neon-green: #00ff88;
-            --dark-bg: #050505;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --main-green: #00ff88; --gold: #d4af37; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Orbitron', sans-serif; }
+        body { background: radial-gradient(circle at center, #0a150a 0%, #000 80%); color: white; text-align: center; overflow-x: hidden; }
         
-        body {
-            background: radial-gradient(circle at center, #0a1a0a 0%, #000 80%);
-            color: white;
-            font-family: 'Montserrat', sans-serif;
-            line-height: 1.6;
-            overflow-x: hidden;
-            padding-top: 80px; /* Navbar için boşluk */
-        }
-
-        h1, h2, h3 { font-family: 'Orbitron', sans-serif; text-transform: uppercase; letter-spacing: 3px; }
-
         /* NAVBAR */
-        nav {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 10px 5%; background: rgba(0,0,0,0.95);
-            position: fixed; width: 100%; top: 0; z-index: 1000;
-            border-bottom: 1px solid var(--gold);
-            height: 80px;
-        }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; background: rgba(0, 0, 0, 0.9); position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid var(--main-green); }
+        nav h1 { color: var(--main-green); font-size: 1.2rem; text-shadow: 0 0 10px var(--main-green); }
+        nav ul { display: flex; list-style: none; gap: 15px; }
+        nav ul li a { color: white; text-decoration: none; font-size: 0.7rem; text-transform: uppercase; }
 
-        .nav-logo-fallback {
-            color: var(--neon-green);
-            font-family: 'Orbitron', sans-serif;
-            font-weight: bold;
-            font-size: 1.2rem;
-            letter-spacing: 2px;
-        }
-
-        .nav-links { display: flex; list-style: none; gap: 15px; }
-        .nav-links a { color: white; text-decoration: none; font-size: 0.7rem; transition: 0.3s; text-transform: uppercase; }
-        .nav-links a:hover { color: var(--neon-green); }
-
-        /* HERO SECTION */
-        .hero {
-            padding: 100px 20px 60px; text-align: center;
-            display: flex; flex-direction: column; align-items: center;
-        }
-
-        .hero-img {
-            width: 200px; height: auto; margin-bottom: 20px;
-            filter: drop-shadow(0 0 15px var(--neon-green));
-            animation: pulse 3s infinite ease-in-out;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.9; }
-            50% { transform: scale(1.03); opacity: 1; }
-        }
-
-        /* BUTTONS */
-        .btn-group { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 30px; }
+        /* HERO */
+        .hero { padding: 120px 20px 60px; display: flex; flex-direction: column; align-items: center; }
+        .hero-img { width: 220px; margin: 20px 0; animation: float 4s ease-in-out infinite; filter: drop-shadow(0 0 25px var(--main-green)); }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
         
-        .btn {
-            padding: 10px 20px; border: 1px solid var(--gold);
-            color: var(--gold); text-decoration: none; font-weight: bold; font-size: 0.8rem;
-            transition: 0.4s; background: transparent; cursor: pointer;
-            text-transform: uppercase; letter-spacing: 1px;
-        }
-
-        .btn:hover { background: var(--gold); color: black; box-shadow: 0 0 15px var(--gold); }
-
-        .btn-wallet { border-color: var(--neon-green); color: var(--neon-green); }
-        .btn-wallet:hover { background: var(--neon-green); color: black; box-shadow: 0 0 15px var(--neon-green); }
+        .btn-group { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 20px; }
+        .btn { padding: 12px 25px; background: transparent; color: var(--main-green); border: 2px solid var(--main-green); text-decoration: none; font-weight: bold; transition: 0.4s; font-size: 0.8rem; cursor: pointer; }
+        .btn:hover { background: var(--main-green); color: #000; box-shadow: 0 0 20px var(--main-green); }
+        .btn-gold { border-color: var(--gold); color: var(--gold); }
+        .btn-gold:hover { background: var(--gold); color: #000; box-shadow: 0 0 20px var(--gold); }
 
         /* SECTIONS */
-        section { padding: 60px 5%; border-bottom: 1px solid #111; text-align: center; }
-        .section-title { color: var(--gold); margin-bottom: 25px; font-size: 1.8rem; }
+        section { padding: 60px 10%; border-bottom: 1px solid #111; }
+        h2 { color: var(--gold); margin-bottom: 20px; font-size: 1.8rem; }
+        .reward-box { border: 2px dashed var(--main-green); padding: 30px; border-radius: 10px; background: rgba(0,255,136,0.05); }
 
-        /* REWARDS BOX */
-        .rewards-card {
-            background: rgba(20, 20, 20, 0.8);
-            border: 2px dashed var(--neon-green);
-            padding: 25px; margin: 20px auto 0;
-            border-radius: 10px; max-width: 600px;
-        }
+        /* SOCIAL */
+        .social-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; margin-top: 30px; }
+        .social-item { padding: 15px; background: #111; border: 1px solid #333; text-decoration: none; color: white; transition: 0.3s; font-size: 0.8rem; }
+        .social-item:hover { border-color: var(--main-green); transform: translateY(-5px); }
 
-        /* SOCIAL ICONS */
-        .social-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 15px;
-            margin-top: 30px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .social-link {
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
-            padding: 15px; background: rgba(255,255,255,0.05);
-            border-radius: 5px; transition: 0.3s; text-decoration: none; color: white;
-            font-size: 0.8rem; font-weight: bold; border: 1px solid transparent;
-        }
-        
-        .social-link:hover {
-            background: rgba(255,255,255,0.1);
-            border-color: var(--neon-green);
-            transform: translateY(-3px);
-        }
-
-        .social-icon-placeholder {
-            font-size: 1.5rem; margin-bottom: 8px; color: var(--neon-green);
-        }
-
-        footer { padding: 30px; text-align: center; font-size: 0.6rem; color: #444; border-top: 1px solid #111; }
-
-        /* Mobile Adjustments */
-        @media (max-width: 600px) {
-            nav { flex-direction: column; height: auto; padding: 10px; }
-            .nav-links { margin-top: 10px; gap: 10px; flex-wrap: wrap; justify-content: center; }
-            .btn-wallet { margin-top: 10px; width: 100%; }
-            .hero-img { width: 150px; }
-            .section-title { font-size: 1.5rem; }
-        }
+        footer { padding: 40px; font-size: 0.7rem; opacity: 0.5; }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="nav-logo-fallback">ZEDO</div>
-        <ul class="nav-links">
-            <li><a href="#about">Hakkımızda</a></li>
-            <li><a href="#rewards">Ödüller</a></li>
-            <li><a href="#social">Sosyal Ağlar</a></li>
+        <h1>ZEDO COIN</h1>
+        <ul>
+            <li><a href="#hakkimizda">Hakkımızda</a></li>
+            <li><a href="#sosyal">Sosyal</a></li>
         </ul>
-        <button class="btn btn-wallet" onclick="connectWallet()">CÜZDAN BAĞLA</button>
+        <button class="btn" onclick="connectWallet()" id="walletBtn">CÜZDAN BAĞLA</button>
     </nav>
 
-    <header class="hero">
-        <img src="https://raw.githubusercontent.com/Zedocoin/index.html-logo-png/main/logo.png" alt="ZEDOCOIN Logo" class="hero-img">
+    <div class="hero">
+        <img src="logo.png" alt="ZEDO LOGO" class="hero-img" onerror="this.src='https://via.placeholder.com/200?text=Logo+Yukle'">
         
-        <h2>The Boss is Here</h2>
-        <p style="color: var(--gold); margin-top: 10px; font-size: 0.9rem;">Güç, Teknoloji ve Sadakat.</p>
+        <h2>THE BOSS IS HERE</h2>
+        <p>Güç ve Teknoloji Bir Arada.</p>
         
         <div class="btn-group">
-            <a href="#" class="btn">KAYIT OL</a>
-            <a href="#" class="btn">ÜYE GİRİŞİ</a>
-            <a href="#" class="btn">ZEDO SATIN AL</a>
+            <a href="#" class="btn btn-gold">KAYIT OL</a>
+            <a href="#" class="btn">ÜYE OL</a>
+            <a href="#" class="btn btn-gold">ZED SATIN AL</a>
         </div>
-    </header>
+    </div>
 
-    <section id="about">
-        <h2 class="section-title">Hakkımızda</h2>
-        <p style="max-width: 700px; margin: 0 auto; font-size: 0.9rem;">Zedocoin, sadece bir dijital varlık değil, bir topluluk imparatorluğudur. Binance Smart Chain üzerinde inşa edilen bu ekosistem, şeffaflık ve güç üzerine kurulmuştur. Ailemize katılan her üye, geleceğin finansal otoritesinin bir parçası olur.</p>
+    <section id="hakkimizda">
+        <h2>Hakkımızda</h2>
+        <p style="line-height: 1.6; font-size: 0.9rem;">Zedocoin, Binance Smart Chain üzerinde gücü ve sadakati temsil eden bir topluluk projesidir. Mafya estetiği ve modern blockchain teknolojisini bir araya getirerek yatırımcılarına benzersiz bir ekosistem sunar.</p>
     </section>
 
-    <section id="rewards">
-        <h2 class="section-title">Hediye ZED Kazan</h2>
-        <div class="rewards-card">
-            <h3>Büyük Operasyon</h3>
-            <p style="margin: 15px 0; font-size: 0.9rem;">Bizi sosyal medyada etiketle, 5 arkadaşını aktif üye yap ve cüzdanına anında <strong>ZED Token</strong> ödülünü al!</p>
-            <button class="btn" onclick="shareLink()">BENİ ETİKETLE & PAYLAŞ</button>
+    <section id="odul">
+        <h2>5 ARKADAŞ GETİR, KAZAN!</h2>
+        <div class="reward-box">
+            <p>Bizi sosyal ağlarda etiketle ve 5 arkadaşını aktif üye yap!</p>
+            <p style="margin: 15px 0; color: var(--main-green); font-weight: bold;">HEDİYE: 1000 ZED TOKEN</p>
+            <button class="btn" onclick="alert('Referans linkin yakında burada olacak!')">PAYLAŞ VE ETİKETLE</button>
         </div>
     </section>
 
-    <section id="social">
-        <h2 class="section-title">Sosyal Ağlar</h2>
+    <section id="sosyal">
+        <h2>SOSYAL AĞLARIMIZ</h2>
         <div class="social-grid">
-            <a href="#" class="social-link"><span class="social-icon-placeholder">f</span>Facebook</a>
-            <a href="#" class="social-link"><span class="social-icon-placeholder">t</span>Telegram</a>
-            <a href="#" class="social-link"><span class="social-icon-placeholder">x</span>X (Twitter)</a>
-            <a href="#" class="social-link"><span class="social-icon-placeholder">i</span>Instagram</a>
-            <a href="#" class="social-link"><span class="social-icon-placeholder">🎵</span>TikTok</a>
-            <a href="#" class="social-link"><span class="social-icon-placeholder">y</span>YouTube</a>
+            <a href="#" class="social-item">FACEBOOK</a>
+            <a href="#" class="social-item">TELEGRAM</a>
+            <a href="#" class="social-item">X (TWITTER)</a>
+            <a href="#" class="social-item">INSTAGRAM</a>
+            <a href="#" class="social-item">TIKTOK</a>
+            <a href="#" class="social-item">YOUTUBE</a>
         </div>
     </section>
 
-    <footer>
-        &copy; 2026 ZEDOCOIN GLOBAL. Tüm hakları saklıdır.
-    </footer>
+    <footer>&copy; 2026 ZEDOCOIN GLOBAL - TÜM HAKLARI SAKLIDIR</footer>
 
     <script>
-        function connectWallet() {
-            if (typeof window.ethereum !== 'undefined') {
-                window.ethereum.request({ method: 'eth_requestAccounts' })
-                .then(accounts => {
-                    alert('Bağlanan Cüzdan: ' + accounts[0]);
-                    document.querySelector('.btn-wallet').innerText = 'BAĞLANDI';
-                })
-                .catch(err => {
-                    console.log(err);
-                    alert('Bağlantı reddedildi.');
-                });
+        async function connectWallet() {
+            if (window.ethereum) {
+                try {
+                    const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+                    document.getElementById('walletBtn').innerText = "BAĞLANDI: " + accounts[0].substring(0,6) + "...";
+                    alert("Cüzdan Başarıyla Bağlandı!");
+                } catch (err) {
+                    alert("Bağlantı reddedildi.");
+                }
             } else {
-                alert('Lütfen Metamask veya Trust Wallet kurun!');
+                alert("Lütfen Metamask veya Trust Wallet kullanın!");
             }
-        }
-
-        function shareLink() {
-            const shareText = "ZEDOCOIN ailesine katıldım! Sen de gel, beraber kazanalım. @Zedocoin #ZedoCoin";
-            const url = window.location.href;
-            window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${url}`, '_blank');
         }
     </script>
 
